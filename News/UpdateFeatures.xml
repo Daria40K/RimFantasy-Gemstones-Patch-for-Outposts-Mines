@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HugsLib.UpdateFeatureDef Abstract="true" Name="UpdateFeatureBase">
+		<modNameReadable>RimFantasy Gemstones Patch for Outposts Mines</modNameReadable>
+		<modIdentifier>daria40k.rimfantasygemstonespatchoutposts</modIdentifier>
+		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2704939812</linkUrl>
+	</HugsLib.UpdateFeatureDef>
+	
+    <!-- v2 -->
+	<HugsLib.UpdateFeatureDef ParentName="UpdateFeatureBase">
+		<defName>RimFantasyGemstonesPatchOutposts_2</defName>
+		<assemblyVersion>2.0</assemblyVersion>
+		<content>Updated for RimWorld 1.4</content>
+	</HugsLib.UpdateFeatureDef>
+</Defs>

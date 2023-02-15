@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>RimFantasy - Gemstones</li>
+    </mods>
+
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationInsert">
+          <xpath>Defs/WorldObjectDef[defName="Outpost_Mining"]</xpath>
+          <value>
+            <WorldObjectDef ParentName="OutpostBase">
+              <defName>Outpost_Gem_Mining</defName>
+              <label>gem mining outpost</label>
+              <description>Places a temporary, autonomously-led camp that specializes in collecting gemstones, can only be placed on hills or mountains. Once an ample amount is collected, a delivery will be made at the outskirts of a faction's primary colony.</description>
+              <worldObjectClass>VOE.Outpost_Mining</worldObjectClass>
+              <expandingIconTexture>WorldObjects/OutpostGemMining</expandingIconTexture>
+              <modExtensions>
+                <li Class="VOE.OutpostExtension_Mining">
+                  <RequiredSkills>
+                    <Mining>20</Mining>
+                  </RequiredSkills>
+                  <ChooseLabel>Mining {0}</ChooseLabel>
+                  <ChooseDesc>Click to change mining target.</ChooseDesc>
+                  <Resources>
+                    <RF_RoughDiamond>20</RF_RoughDiamond>
+                    <RF_RoughRuby>20</RF_RoughRuby>
+                    <RF_RoughCarnelian>20</RF_RoughCarnelian>
+                    <RF_RoughCitrine>20</RF_RoughCitrine>
+                    <RF_RoughPeridot>20</RF_RoughPeridot>
+                    <RF_RoughEmerald>20</RF_RoughEmerald>
+                    <RF_RoughAquamarine>20</RF_RoughAquamarine>
+                    <RF_RoughSapphire>20</RF_RoughSapphire>
+                    <RF_RoughAmethyst>20</RF_RoughAmethyst>
+                    <RF_RoughKunzite>20</RF_RoughKunzite>
+                    <RF_RoughOnyx>20</RF_RoughOnyx>
+                  </Resources>
+                </li>
+                <li Class="KCSG.CustomGenOption">
+                  <preventBridgeable>true</preventBridgeable>
+                  <chooseFromlayouts>
+                    <li>Outpost_Struct_Mining</li>
+                  </chooseFromlayouts>
+                  <fullClear>true</fullClear>
+                </li>
+              </modExtensions>
+            </WorldObjectDef>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>
